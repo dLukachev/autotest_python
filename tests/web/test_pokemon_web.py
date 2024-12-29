@@ -28,12 +28,12 @@ def test_positive_login():
 		# ищем по селектору инпут "Email", кликаем по нему и вводим значение email
     email = WebDriverWait(driver, timeout=10, poll_frequency=2).until(EC.element_to_be_clickable((By.CSS_SELECTOR, '[class*="f_email"]')))
     email.click()
-    email.send_keys('ddrxg@yandex.ru') # введи тут email своего тестового аккаунта на stage окружении
+    email.send_keys('email') # тут email своего тестового аккаунта на stage окружении
 		
 		# ищем по селектору инпут "Password", кликаем по нему и вводим значение пароля
     password = driver.find_element(by=By.CSS_SELECTOR, value='[class*="f_pass"]')
     password.click()
-    password.send_keys('qaSTudioSTAGE!@3') # введи тут пароль своего тестового аккаунта на stage окружении
+    password.send_keys('password') # тут пароль своего тестового аккаунта на stage окружении
 		
 		# ищем по селектору кнопку "Войти" и кликаем по ней
     enter = driver.find_element(by=By.CSS_SELECTOR, value='[class*="send_auth"]')
